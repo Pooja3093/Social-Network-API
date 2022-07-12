@@ -17,7 +17,7 @@ const userSchema = new Schema(
       trim: true
     } ,
     email: {
-      type: stringify,
+      type: String,
       required: true,
       unique: true,
       validate: [validateEmail, 'Please provide a valid email address'],
@@ -46,12 +46,12 @@ const userSchema = new Schema(
   }
 );
 
-// Create a virtual property `fullName` that gets and sets the user's full name
+// Create a virtual property `friendCount` that gets the user's friend Count from friends array
 userSchema
   .virtual('friendCount')
   // Getter
   .get(function () {
-    return `${this.friends.length()}`;
+    return `${this.friends.length}`;
   });
 
 // Initialize our User model

@@ -4,10 +4,10 @@ const reactionSchema = new Schema(
   {
     reactionId: {
         type: Schema.Types.ObjectId,
-        // default:
+        default: () => new Schema.Types.ObjectId(),
     },
     reactionBody:{
-        type: string,
+        type: String,
         required: true,
         maxLength: 280,
     },
@@ -26,7 +26,7 @@ const reactionSchema = new Schema(
 const thoughtsSchema = new Schema(
   {
     thoughtText: {
-      type: string,
+      type: String,
       required: true,
       minLength: 1,
       maxLength: 280,
@@ -36,7 +36,7 @@ const thoughtsSchema = new Schema(
       default: Date.now,
     },
     username: {
-      type: string,
+      type: String,
       required: true,
     },
     reactions: [ reactionSchema ],
@@ -54,10 +54,10 @@ thoughtsSchema
 .virtual('reactionCount')
 // Getter
 .get(function () {
-  return `${this.reactions.length()}`;
+  return `${this.reactions.length}`;
 });
 
 // Initialize our Post model
-const Thoughts = model('thoughts', thoughtsSchema);
+const Thoughts = model('thought', thoughtsSchema);
 
 module.exports = Thoughts;
