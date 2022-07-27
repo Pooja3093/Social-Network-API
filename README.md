@@ -34,13 +34,17 @@ Watch the walk through video for further reference.
 
 ## Links
 
-[GitHub Repository]()
+[GitHub Repository](https://github.com/Pooja3093/bookish-lamp.git)
 
-[Walk Through Video]()
+[Walk Through Video](https://drive.google.com/file/d/1QmvDyMAfYJqRYYXFsd4rlZ7lw-cDwJTy/view)
+
+As video as a limit of 5 min recording, rest of the tests are shown in the screenshots below.
 
 
 ## Scrennshots
 
-![User Route]()
+![Add Reaction](/images/Add%20Reaction.png)
 
-![Thought Route]()
+![Remove Reaction](/images/Remove%20Reaction.png)
+
+![Delete Thought](/images/Delete%20Thought.png)
