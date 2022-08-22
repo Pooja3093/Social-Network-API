@@ -1,7 +1,3 @@
-### bookish-lamp
-
-### Module 18 challenge
-
 # Social Network API
 
 ## Description
